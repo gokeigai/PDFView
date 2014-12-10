@@ -26,7 +26,8 @@ angular.module('pdfview', ['ionic'])
 
 .controller('PdfController', function($scope) {
 	$scope.openPdf = function(url){
-		window.open(url, '_blank', 'location=yes')
+		var googleUrl = 'https://docs.google.com/gview?embedded=true&url=' + url;
+		window.open(encodeURI(googleUrl), '_blank', 'location=yes')
 	}
 
 })
