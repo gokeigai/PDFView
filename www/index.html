@@ -30,11 +30,8 @@
       </ion-header-bar>
       <ion-content>
       	<ion-list>
-        	<ion-item ng-repeat="pdf in pdfs">
+        	<ion-item ng-repeat="pdf in pdfs" ng-controller="PdfController" ng-click="openPdf('{{pdf.url}}')">
       			{{pdf.title}} 
-                <div>
-                	<button ng-controller="PdfController" ng-click="openPdf('{{pdf.url}}')">View</button>
-                </div>
             </ion-item>
         </ion-list>
       </ion-content>
